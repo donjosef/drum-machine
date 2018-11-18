@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import KeyPad from './components/KeyPad/KeyPad';
+import Controls from './components/Controls/Controls'
 import './DrumMachine.css';
 
 class DrumMachine extends Component {
@@ -7,7 +8,7 @@ class DrumMachine extends Component {
     return (
       <div className="DrumMachine">
         <KeyPad />
-
+        <Controls />
       </div>
     );
   }

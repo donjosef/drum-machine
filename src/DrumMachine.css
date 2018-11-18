@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 .DrumMachine {
   text-align: center;
   margin: 50px auto;
-  width: 60%;
+  width: 70%;
   border: 2px solid rgba(30,30,30,0.6);
   border-radius: 20px;
   background: #444445;
@@ -11,7 +15,7 @@
 }
 
 .keypad {
-  width: 50%;
+  width: 60%;
   height: 250px;
   margin: 0;
   padding: 0;
@@ -33,4 +37,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Controls */
+
+.controls {
+  width: 38%;
+  border: 2px solid rgba(30,30,30,0.6);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.power-label {
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.power {
+  width: 70px;
+  background: black;
+  height: 30px;
+  padding: 2px;
+}
+
+
+.switch {
+  width: 50%;
+  height: 100%;
+  background: #C2F970;
 }
