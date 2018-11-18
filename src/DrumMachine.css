@@ -48,14 +48,18 @@
   padding: 1rem;
 }
 
-.power-label {
+.power-label,
+.bank-label {
   margin: 0;
   margin-bottom: 5px;
+  margin-top: 10px;
   text-align: left;
   text-transform: uppercase;
   font-weight: bold;
+  color: #111;
 }
-.power {
+.power,
+.bank {
   width: 70px;
   background: black;
   height: 30px;
@@ -63,7 +67,8 @@
 }
 
 
-.switch {
+.switch,
+.switch-bank {
   width: 50%;
   height: 100%;
   background: #C2F970;
