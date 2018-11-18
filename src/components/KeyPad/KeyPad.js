@@ -19,7 +19,7 @@ const KeyPad = (props) => {
         key={key + index}
         charachter={key}
         audioId={key}
-        audioSrc={props.audioSrc}/>
+        audio={props.audios[index]}/>
   ));
   return(
     <ul className="keypad">
