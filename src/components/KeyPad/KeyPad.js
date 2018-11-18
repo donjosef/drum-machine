@@ -15,7 +15,11 @@ const KeyPad = (props) => {
   ];
 
   const drumKeys = keys.map((key, index) => (
-      <DrumKey  key={key + index} charachter={key}/>
+      <DrumKey
+        key={key + index}
+        charachter={key}
+        audioId={key}
+        audioSrc={props.audioSrc}/>
   ));
   return(
     <ul className="keypad">
