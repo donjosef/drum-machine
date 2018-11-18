@@ -3,8 +3,17 @@ import Audio from './Audio/Audio';
 
 const DrumKey = (props) => {
 
+  let classes = ["drum-pad"];
+  if(props.selectedPad && props.selectedPad === props.charachter) {
+    classes.push("active");
+  }
+
   return (
-    <li className="drum-pad">
+    <li
+      className={classes.join(' ')}
+      onClick={() => props.selectPad(props.charachter)}
+      onAnimationEnd={props.removeActive}
+      >
       {props.charachter}
       <Audio
         audioSrc={props.audio}

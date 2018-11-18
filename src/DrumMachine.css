@@ -35,6 +35,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.active {
+  animation: btnActive 0.15s;
+}
+
+@keyframes btnActive {
+  0% {
+    background: rgb(20,20,20);
+  }
+
+  100% {
+    background: #C2F970;
+    color: #666;
+  }
 }
 
 /* Controls */

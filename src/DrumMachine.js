@@ -18,14 +18,29 @@ const kit2 = importAll(require.context('./resources/audio-kit2', false, /.wav$/)
 class DrumMachine extends Component {
 
   state = {
-    audios: kit1
+    audios: kit1,
+    selectedPad: null
   }
 
+selectPadHandler = (char) => {
+  this.setState({
+    selectedPad: char
+  });
+}
+
+/* When animation for active button ends */
+removeActiveButton = () => {
+   this.setState({selectedPad: null});
+}
 
   render() {
     return (
       <div className="DrumMachine">
-        <KeyPad audios={this.state.audios}/>
+        <KeyPad
+          audios={this.state.audios}
+          selectPad={this.selectPadHandler}
+          selectedPad={this.state.selectedPad}
+          removeActive={this.removeActiveButton}/>
         <Controls />
       </div>
     );
