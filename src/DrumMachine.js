@@ -22,6 +22,11 @@ class DrumMachine extends Component {
     selectedPad: null
   }
 
+componentDidMount() {
+  window.addEventListener('keydown', (e) => {
+    this.selectPadHandler(e.key.toUpperCase())
+  });
+}
 selectPadHandler = (char) => {
   this.setState({
     selectedPad: char
