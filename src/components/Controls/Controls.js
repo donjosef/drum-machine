@@ -11,6 +11,8 @@ const Controls = (props) => (
       power={props.power}
       togglePower={props.togglePower}/>
     <Switch
+      kit2={props.kit2}
+      toggleBank={props.toggleBank}
       label='bank'/>
     <Volume />
   </div>
