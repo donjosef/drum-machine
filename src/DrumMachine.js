@@ -21,7 +21,8 @@ class DrumMachine extends Component {
     audios: kit1,
     selectedPad: null,
     power: true,
-    kit2: false
+    kit2: false,
+    volume: 50
   }
 
 componentDidMount() {
@@ -61,6 +62,9 @@ toggleBankHandler = () => {
   }
 }
 
+changeVolumeHandler = (e) => {
+  this.setState({volume: e.target.value});
+}
   render() {
     return (
       <div className="DrumMachine">
@@ -73,7 +77,9 @@ toggleBankHandler = () => {
           kit2={this.state.kit2}
           power={this.state.power}
           togglePower={this.togglePowerHandler}
-          toggleBank={this.toggleBankHandler}/>
+          toggleBank={this.toggleBankHandler}
+          volume={this.state.volume}
+          changeVolume={this.changeVolumeHandler}/>
       </div>
     );
   }

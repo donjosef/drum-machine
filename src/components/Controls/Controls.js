@@ -14,7 +14,9 @@ const Controls = (props) => (
       kit2={props.kit2}
       toggleBank={props.toggleBank}
       label='bank'/>
-    <Volume />
+    <Volume
+      volume={props.volume}
+      changeVolume={props.changeVolume}/>
   </div>
 );
 
