@@ -30,6 +30,9 @@ componentDidMount() {
   });
 }
 selectPadHandler = (char) => {
+  if(!this.state.power) {
+    return;
+  }
   this.setState({
     selectedPad: char
   });
