@@ -19,7 +19,8 @@ class DrumMachine extends Component {
 
   state = {
     audios: kit1,
-    selectedPad: null
+    selectedPad: null,
+    power: true
   }
 
 componentDidMount() {
@@ -38,6 +39,10 @@ removeActiveButton = () => {
    this.setState({selectedPad: null});
 }
 
+togglePowerHandler = () => {
+  this.setState({power: !this.state.power})
+}
+
   render() {
     return (
       <div className="DrumMachine">
@@ -46,7 +51,9 @@ removeActiveButton = () => {
           selectPad={this.selectPadHandler}
           selectedPad={this.state.selectedPad}
           removeActive={this.removeActiveButton}/>
-        <Controls />
+        <Controls
+          power={this.state.power}
+          togglePower={this.togglePowerHandler}/>
       </div>
     );
   }
