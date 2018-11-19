@@ -69,6 +69,7 @@ changeVolumeHandler = (e) => {
     return (
       <div className="DrumMachine">
         <KeyPad
+          volume={this.state.volume}
           audios={this.state.audios}
           selectPad={this.selectPadHandler}
           selectedPad={this.state.selectedPad}
