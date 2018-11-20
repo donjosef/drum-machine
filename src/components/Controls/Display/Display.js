@@ -2,7 +2,7 @@ import React from 'react';
 
 const Display = (props) => {
   return (
-    <div className='display'>{props.type}</div>
+    <div className='display'>{props.power ? props.type : null}</div>
 
   );
 }

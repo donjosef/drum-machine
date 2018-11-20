@@ -5,7 +5,9 @@ import Display from './Display/Display';
 
 const Controls = (props) => (
   <div className='controls'>
-    <Display type={props.type}/>
+    <Display
+      type={props.type}
+      power={props.power}/>
     <Switch
       label='power'
       power={props.power}

@@ -34,6 +34,7 @@ componentDidMount() {
     this.selectPadHandler(e.key.toUpperCase())
   });
 }
+
 selectPadHandler = (char) => {
   if(!this.state.power) {
     return;
@@ -49,7 +50,10 @@ removeActiveButton = () => {
 }
 
 togglePowerHandler = () => {
-  this.setState({power: !this.state.power})
+  this.setState({
+    power: !this.state.power,
+    type: null
+  })
 }
 
 toggleBankHandler = () => {
