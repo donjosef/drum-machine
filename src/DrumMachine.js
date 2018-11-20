@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import KeyPad from './components/KeyPad/KeyPad';
 import Controls from './components/Controls/Controls'
+import AudioContext from './audio-context';
+
 import './DrumMachine.css';
 
 /*Stackoverflow https://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack*/
@@ -84,13 +86,18 @@ displayTypeHandler = (src) => {
   render() {
     return (
       <div className="DrumMachine">
+      <AudioContext.Provider value={{
+        volume: this.state.volume,
+        displayType: this.displayTypeHandler
+      }}>
         <KeyPad
-          volume={this.state.volume}
           audios={this.state.audios}
           selectPad={this.selectPadHandler}
           selectedPad={this.state.selectedPad}
           removeActive={this.removeActiveButton}
-          displayType={this.displayTypeHandler}/>
+        />
+      </AudioContext.Provider>
+
         <Controls
           kit2={this.state.kit2}
           power={this.state.power}

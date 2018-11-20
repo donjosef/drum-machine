@@ -16,7 +16,6 @@ const KeyPad = (props) => {
 
   const drumKeys = keys.map((key, index) => (
       <DrumKey
-        volume={props.volume}
         key={key + index}
         charachter={key}
         audioId={key}
@@ -24,7 +23,7 @@ const KeyPad = (props) => {
         selectPad={props.selectPad}
         selectedPad={props.selectedPad}
         removeActive={props.removeActive}
-        displayType={props.displayType}/>
+        />
   ));
   return(
     <ul className="keypad">
