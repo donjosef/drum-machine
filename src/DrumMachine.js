@@ -7,7 +7,10 @@ import './DrumMachine.css';
 function importAll(r) {
   let audios = [];
   r.keys().forEach((item, index) => {
-    audios.push(r(item));
+    audios.push({
+      src: r(item),
+      type: r(item).slice(r(item).lastIndexOf('/') + 1, r(item).indexOf('.')) //the portion of path from last / to . To extract the name of file
+    });
   });
   return audios;
 }
