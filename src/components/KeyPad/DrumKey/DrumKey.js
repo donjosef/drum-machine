@@ -19,7 +19,8 @@ const DrumKey = (props) => {
         volume={props.volume}
         selectedPad={props.selectedPad}
         audioSrc={props.audio.src}
-        audioId={props.audioId}/>
+        audioId={props.audioId}
+        displayType={props.displayType}/>
     </li>
   );
 }

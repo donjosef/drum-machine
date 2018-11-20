@@ -23,7 +23,8 @@ const KeyPad = (props) => {
         audio={props.audios[index]}
         selectPad={props.selectPad}
         selectedPad={props.selectedPad}
-        removeActive={props.removeActive}/>
+        removeActive={props.removeActive}
+        displayType={props.displayType}/>
   ));
   return(
     <ul className="keypad">

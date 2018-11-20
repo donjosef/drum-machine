@@ -7,6 +7,8 @@ componentDidUpdate(prevProps, prevState) {
     this.audio.currentTime = 0;
     this.audio.volume = parseFloat(this.props.volume) / 100;
     this.audio.play();
+
+    this.props.displayType(this.props.audioSrc); //when playing trigger display type
   }
 }
   render() {

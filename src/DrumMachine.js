@@ -22,6 +22,7 @@ class DrumMachine extends Component {
 
   state = {
     audios: kit1,
+    type: null,
     selectedPad: null,
     power: true,
     kit2: false,
@@ -68,6 +69,14 @@ toggleBankHandler = () => {
 changeVolumeHandler = (e) => {
   this.setState({volume: e.target.value});
 }
+
+displayTypeHandler = (src) => {
+   /* Find the audio with the src passed, and destructure the type property*/
+    const {type} = this.state.audios.find(audio => audio.src === src );
+
+    this.setState({type});
+}
+
   render() {
     return (
       <div className="DrumMachine">
@@ -76,14 +85,16 @@ changeVolumeHandler = (e) => {
           audios={this.state.audios}
           selectPad={this.selectPadHandler}
           selectedPad={this.state.selectedPad}
-          removeActive={this.removeActiveButton}/>
+          removeActive={this.removeActiveButton}
+          displayType={this.displayTypeHandler}/>
         <Controls
           kit2={this.state.kit2}
           power={this.state.power}
           togglePower={this.togglePowerHandler}
           toggleBank={this.toggleBankHandler}
           volume={this.state.volume}
-          changeVolume={this.changeVolumeHandler}/>
+          changeVolume={this.changeVolumeHandler}
+          type={this.state.type}/>
       </div>
     );
   }
