@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/drum-machine/static/media/punchy_kick_1.a6a991c5.mp3"
   },
   {
-    "revision": "931f60b6777daf6a290c",
+    "revision": "bb8551c647f79742f84b",
     "url": "/drum-machine/static/css/main.2f2ec11c.chunk.css"
   },
   {
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/drum-machine/static/media/Give_us_a_light.561c9a54.mp3"
   },
   {
-    "revision": "931f60b6777daf6a290c",
-    "url": "/drum-machine/static/js/main.931f60b6.chunk.js"
+    "revision": "bb8551c647f79742f84b",
+    "url": "/drum-machine/static/js/main.bb8551c6.chunk.js"
   },
   {
     "revision": "123a99c7ed11a3254ac92032ffba1122",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/drum-machine/static/media/tom.572ed39d.wav"
   },
   {
-    "revision": "4b4ec5e2d9648535a042ea4422606204",
+    "revision": "5f0303df3da94f46096f751b1bf34b3e",
     "url": "/drum-machine/index.html"
   }
 ];
