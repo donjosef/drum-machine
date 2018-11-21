@@ -17,6 +17,7 @@ const KeyPad = (props) => {
   const drumKeys = keys.map((key, index) => (
       <DrumKey
         key={key + index}
+        id={key + index}
         charachter={key}
         audioId={key}
         audio={props.audios[index]}

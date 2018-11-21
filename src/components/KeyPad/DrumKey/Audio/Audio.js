@@ -11,13 +11,14 @@ componentDidUpdate(prevProps, prevState) {
     this.audio.currentTime = 0;
     this.audio.volume = parseFloat(this.context.volume) / 100;
     this.audio.play();
-
+    console.dir(this.audio)
     this.context.displayType(this.props.audioSrc); //when playing, trigger displayType now handled by context instead of props
   }
 }
   render() {
     return (
       <audio
+        className="clip"
         ref={(audio) => this.audio = audio}
         src={this.props.audioSrc}
         id={this.props.audioId}/>

@@ -85,7 +85,7 @@ displayTypeHandler = (src) => {
 
   render() {
     return (
-      <div className="DrumMachine">
+      <div id="drum-machine" className="DrumMachine">
       <AudioContext.Provider value={{
         volume: this.state.volume,
         displayType: this.displayTypeHandler

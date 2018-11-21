@@ -10,6 +10,7 @@ const DrumKey = (props) => {
 
   return (
     <li
+      id={props.id}
       className={classes.join(' ')}
       onClick={() => props.selectPad(props.charachter)}
       onAnimationEnd={props.removeActive}
